@@ -6,15 +6,16 @@ This project describes how to build a device to detect water and post the status
 We will use a ESP8266 NodeMCU Arduino based controller with a simple water detection circuit using a 2N2222 NPN transitor, 
 1K ohm reistor and a 100uF electrolytic capacitor (with optional LED for indicator).  Multiple water probes can be added to measure water level.
 
-Optional temperature probe: Adding a DS18B20 One-Wire Temp Probe One-Wire Temp Probe can be added to send current temperature.
+Optional temperature probe: Adding a DS18B20 One-Wire bus temperature sensor to read and send current temperature.
 
 ## Circuit
-This project is based on the amazing low-cost WiFi enable ESP8266 NodeMCU controller.  We will use two of the GPIO 
-digital ports, specifically:
+This project is based on the amazing low-cost WiFi enable ESP8266 NodeMCU controller.  We will use the GPIO digital ports, specifically:
 * GPIO 13 (pin D7) - Water Sensor #1
 * GPIO 15 (pin D8) - Water Sensor #2
 * GPIO 14 (pin D5) - External LED Indicator
 * GPIO  4 (pin D2) - OneWire Bus for DS18B20 Temperature Probe
+
+![Circuit Board](schematic.png)
 
 ### Water Sensors
 Requires: water resistant 2 prong electrode, 1K ohm reistor and a 100uF electrolytic capacitor 
