@@ -17,11 +17,23 @@ This project is based on the amazing low-cost WiFi enable ESP8266 NodeMCU contro
 
 ![Circuit Board](schematic.png)
 
-### Water Sensors
-Requires: water resistant 2 prong electrode, 1K ohm reistor and a 100uF electrolytic capacitor 
+### Water Sensors (2)
+Components: 
+* E1 & E2 - Water resistant 2 prong electrodes 
+* R1 & R2 - 1K ohm reistors 
+* C1 & C2 - 220uF electrolytic capacitors 
+* Q1 & Q2 - NPN Transitor (2N2222)
 
-### Temperature Sensor
-Requires: DS18B20 temperature sensor (recommend waterproof probe) and 5.1K ohm resistor
+The capacitor provides signal stability and the capacitance can vary depending upon how long you want the sensor to register after the water is detected removed.  For my application, I expect water waves across the sensor so I want to hold the signal high as soon a crests of the waves start making contact with the electrode.  By using a 220uF capacitor once the first detection is made it will hold the signal high for 5 seconds, preventing signal oscillation. 
+
+### Temperature Sensor (1)
+Components: 
+* Temp1 - DS18B20 temperature sensor (recommend waterproof probe) 
+* R3 - 5.1K ohm resistor
+
+### Alert LED (1)
+* D1 - Standard Red LED - Could be replaced with buzzer
+* R4 - 400 ohm resistor
 
 ## Code
 TBD
