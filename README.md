@@ -39,7 +39,7 @@ Arduino IDE Requirements:
 2. Open your Arduino IDE and go to Sketch > Include Library > Manage Libraries and add:
     * One Wire Library
     * Dallas Temperature Sensor library
-3. Open ![ESP8266WaterDetector.ino](ESP8266WaterDetector.ino) source code.
+3. Open [ESP8266WaterDetector.ino](ESP8266WaterDetector.ino) source code.
 
 ## Reference
 ESP8266 NodeMCU - Amazon: https://www.amazon.com/gp/product/B07XVKJ36C/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
