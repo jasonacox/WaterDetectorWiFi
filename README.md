@@ -11,23 +11,21 @@ Optional temperature probe: Adding a DS18B20 One-Wire bus temperature sensor to 
 ## Circuit
 This project is based on the amazing low-cost WiFi enable ESP8266 NodeMCU controller.  We will use the GPIO digital ports, specifically:
 * GPIO 13 (pin D7) - Water Sensor #1
-* GPIO 15 (pin D8) - Water Sensor #2
+* GPIO 12 (pin D6) - Water Sensor #2
 * GPIO 14 (pin D5) - External LED Indicator
 * GPIO  4 (pin D2) - OneWire Bus for DS18B20 Temperature Probe
 
 ![Circuit Board](schematic.png)
 
 ### Water Sensors (2)
-Components: 
 * E1 & E2 - Water resistant 2 prong electrodes 
 * R1 & R2 - 1K ohm reistors 
 * C1 & C2 - 220uF electrolytic capacitors 
-* Q1 & Q2 - NPN Transitor (2N2222)
+* Q1 & Q2 - NPN Transitor (e.g. 2N2222)
 
 The capacitor provides signal stability and the capacitance can vary depending upon how long you want the sensor to register after the water is detected removed.  For my application, I expect water waves across the sensor so I want to hold the signal high as soon a crests of the waves start making contact with the electrode.  By using a 220uF capacitor once the first detection is made it will hold the signal high for 5 seconds, preventing signal oscillation. 
 
 ### Temperature Sensor (1)
-Components: 
 * Temp1 - DS18B20 temperature sensor (recommend waterproof probe) 
 * R3 - 5.1K ohm resistor
 
@@ -36,7 +34,12 @@ Components:
 * R4 - 400 ohm resistor
 
 ## Code
-TBD
+Arduino IDE Requirements:
+1. You should be able to program your ESP8266 from the Arduino IDE.  
+2. Open your Arduino IDE and go to Sketch > Include Library > Manage Libraries and add:
+    * One Wire Library
+    * Dallas Temperature Sensor library
+3. Open ![ESP8266WaterDetector.ino](ESP8266WaterDetector.ino) source code.
 
 ## Reference
 ESP8266 NodeMCU - Amazon: https://www.amazon.com/gp/product/B07XVKJ36C/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
